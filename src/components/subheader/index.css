@@ -1,0 +1,35 @@
+.flex-gap {
+    display: inline-flex;
+  }
+  
+  .flex-gap > div {
+    margin-left: 6px;
+    color:rgb(136, 136, 136);
+cursor:pointer;
+display:inline;
+font-family: 'proxima-nova', sans-serif;
+font-size:16px;
+font-style:normal;
+font-weight:600;
+height:auto;
+letter-spacing:1.18125px;
+line-height:17.6px;
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+padding-bottom:0px;
+padding-left:0px;
+padding-right:0px;
+padding-top:0px;
+text-align:left;
+text-decoration-color:rgb(136, 136, 136);
+text-decoration-line:none;
+text-decoration-style:solid;
+text-size-adjust:100%;
+text-transform:lowercase;
+touch-action:manipulation;
+transition-delay:0s;
+transition-duration:0.24s;
+transition-property:color;
+transition-timing-function:ease-out;
+  }

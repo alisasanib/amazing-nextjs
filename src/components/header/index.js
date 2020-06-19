@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import './index.css';
+import SubHeader from '../subheader';
 const layoutStyle = {
   position: 'fixed',
   zIndex: '10',
@@ -85,7 +86,18 @@ const Header = (props) => {
           <div>news</div>
           <div onClick={() => router.push('/work')}>works</div>
           <div>office</div>
+          
         </div>
+        <div style={{textAlign: "right"}}>
+          {
+            router.pathname === '/work'?
+            <SubHeader/>
+            :null
+          }
+        
+        </div>
+        
+
       </div>
       {/* )} */}
     </React.Fragment>

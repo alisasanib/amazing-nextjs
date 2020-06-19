@@ -8,8 +8,10 @@ const layoutStyle = {
 
 const Layout = (props) => (
   <div style={layoutStyle}>
+    {/* <div style={{display:"flex", flexDirection: "column"}}> */}
     <Header/>
-    <SubHeader/>
+    {/* <SubHeader/> */}
+    {/* </div> */}
     {props.children}
   </div>
 )
