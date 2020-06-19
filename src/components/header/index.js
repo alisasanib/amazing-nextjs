@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import MenuIcon from '@material-ui/icons/Menu';
-import CloseIcon from '@material-ui/icons/Close';
+import Link from 'next/link'
+
 import './index.css';
 import SubHeader from '../subheader';
 const layoutStyle = {
@@ -84,7 +84,9 @@ const Header = (props) => {
           }
         >
           <div>news</div>
-          <div onClick={() => router.push('/work')}>works</div>
+          <Link href="/work">
+          <div>works</div>
+          </Link>
           <div>office</div>
           
         </div>
