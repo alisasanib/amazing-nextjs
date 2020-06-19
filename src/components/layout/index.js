@@ -1,4 +1,6 @@
 import Header from '../header'
+import SubHeader from '../subheader'
+
 const layoutStyle = {
   height:"100%",
   width: "100%",
@@ -7,6 +9,7 @@ const layoutStyle = {
 const Layout = (props) => (
   <div style={layoutStyle}>
     <Header/>
+    <SubHeader/>
     {props.children}
   </div>
 )
