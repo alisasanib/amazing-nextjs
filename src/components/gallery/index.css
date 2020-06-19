@@ -1,0 +1,39 @@
+.container {
+    position: relative;
+  }
+  
+  .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    /* transform: translate(-50%, -50%); */
+    /* -ms-transform: translate(-50%, -50%); */
+    text-align: center;
+  }
+  
+  .container:hover .image {
+    opacity: 0.5;
+  }
+  
+  .container:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+    color: black;
+    font-size: 1.43rem;
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 700;
+    padding: 16px 32px;
+  }
