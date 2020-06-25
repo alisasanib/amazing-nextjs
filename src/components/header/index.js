@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import Link from 'next/link'
+import Link from 'next/link';
 
 import './index.css';
 import SubHeader from '../subheader';
@@ -41,7 +41,13 @@ const Header = (props) => {
         className="header"
       >
         <div
-          style={open ? { color: 'black' } : {}}
+          style={
+            open
+              ? { color: 'black' }
+              : router.pathname === '/'
+              ? { color: 'white' }
+              : { color: 'black' }
+          }
           onClick={() => router.push('/')}
           className="company_name"
         >
@@ -82,24 +88,25 @@ const Header = (props) => {
           className={
             open ? 'other_pages_in_fullscreen_menu' : 'other_pages_in_header'
           }
+          style={
+            router.pathname === '/' && !open
+              ? { color: 'white' }
+              : { color: '#888' }
+          }
         >
-          <div>news</div>
+          <div style={router.pathname === '/news' ? { color: 'black' } : {}}>
+            news
+          </div>
           <Link href="/work">
-          <div>works</div>
+            <div style={router.pathname === '/work' ? { color: 'black' } : {}}>
+              works
+            </div>
           </Link>
           <div>office</div>
-          
         </div>
-        <div style={{textAlign: "right"}}>
-          {
-            router.pathname === '/work'?
-            <SubHeader/>
-            :null
-          }
-        
+        <div className="sub_header" style={{ textAlign: 'right' }}>
+          {router.pathname === '/work' ? <SubHeader /> : null}
         </div>
-        
-
       </div>
       {/* )} */}
     </React.Fragment>

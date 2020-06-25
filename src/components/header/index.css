@@ -53,7 +53,7 @@
   display: flex;
   justify-content: center;
   padding: 1rem 0;
-  color: #888;
+  /* color: #888; */
   cursor: pointer;
 
 }
@@ -106,4 +106,10 @@
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px);
   background-color: black;
+}
+
+@media only screen and (max-width: 640px) {
+  .sub_header {
+    display: none !important;
+  }
 }
