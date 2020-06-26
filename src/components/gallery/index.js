@@ -27,33 +27,45 @@ const useStyles = makeStyles((theme) => ({
 const tileData = [
   {
     img: '/alex-wong-l5Tzv1alcps-unsplash.jpg',
-    title: 'Image',
+    title: 'project 1',
     type: 'education',
+    year: '2010',
+    description: 'Nice one1',
   },
   {
     img: '/alex-wong-l5Tzv1alcps-unsplash.jpg',
-    title: 'Image',
+    title: 'project 2',
     type: 'cuulture',
+    year: '2011',
+    description: 'Nice one2',
   },
   {
     img: '/alex-wong-l5Tzv1alcps-unsplash.jpg',
-    title: 'Image',
+    title: 'project 3',
     type: 'commercial',
+    year: '2020',
+    description: 'Nice one3',
   },
   {
     img: '/alex-wong-l5Tzv1alcps-unsplash.jpg',
-    title: 'Image',
+    title: 'project 4',
     type: 'education',
+    year: '2019',
+    description: 'Nice one4',
   },
   {
     img: '/alex-wong-l5Tzv1alcps-unsplash.jpg',
-    title: 'Image',
+    title: 'project 5',
     type: 'cuulture',
+    year: '2018',
+    description: 'Nice one5',
   },
   {
     img: '/alex-wong-l5Tzv1alcps-unsplash.jpg',
-    title: 'Image',
+    title: 'project 6',
     type: 'commercial',
+    year: '2017',
+    description: 'Nice one6',
   },
 ];
 
@@ -64,8 +76,11 @@ export default function ImageGridList() {
   return (
     <div className={classes.root}>
       <Grid lg={12} sm={12} xs={12} container spacing={5}>
-        {console.log('1234',(router.query.category !== undefined || router.query.category !== 'all'))}
-        {((router.query.category === undefined || router.query.category === 'all')
+        {console.log(
+          '1234',
+          router.query.category !== undefined || router.query.category !== 'all'
+        )}
+        {(router.query.category === undefined || router.query.category === 'all'
           ? tileData
           : tileData.filter((el) => el.type === router.query.category)
         ).map((tile) => (
@@ -77,8 +92,16 @@ export default function ImageGridList() {
                 src={tile.img}
                 alt={tile.title}
               />
+              <div class="top">
+                <div class="text">
+                  <div style={{textAlign:"left"}}>{tile.title}</div>
+                </div>
+              </div>
               <div class="middle">
-                <div class="text">John Doe</div>
+                <div class="text">
+                  <div style={{textAlign:"left"}}>{tile.year}</div>
+                  <div>{tile.description}</div>
+                </div>
               </div>
             </div>
           </Grid>
