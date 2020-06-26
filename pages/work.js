@@ -4,8 +4,10 @@ import Gallery from '../src/components/gallery';
 export default function Index() {
   return (
     <Layout>
-        <div style={{marginTop:"100px", textAlign:"center"}}>works should be here</div>
+        <div style={{marginTop:"100px"}}>
         <Gallery/>
+        </div>
+        
     </Layout>
   );
 }
